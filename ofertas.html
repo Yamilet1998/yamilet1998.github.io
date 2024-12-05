@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - Tienda Virtual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="bg-dark text-white py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">Tienda Virtual</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">Mi Carrito</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="metodos-de-pago.html">Métodos de Pago</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero de Ofertas -->
+    <section class="hero text-center py-5">
+        <h2>¡Ofertas Exclusivas para Ti!</h2>
+        <p>Aprovecha los descuentos especiales en nuestros productos más populares.</p>
+    </section>
+
+    <main class="container mt-5">
+        <h1 class="text-center">Ofertas de Productos</h1>
+
+        <!-- Ofertas en Grid (Filas y Columnas) -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <!-- Producto 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/triden oferta.webp" class="card-img-top" alt="Oferta 1">
+                    <div class="card-body">
+                        <h5 class="card-title">S/4.90</h5>
+                        <p class="card-text">¡Descuento del 20%! No dejes pasar esta oportunidad.</p>
+                        <button class="btn btn-primary agregar" data-producto="Producto con Descuento 1" data-precio="20">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/pack Lays + piqueo.webp" class="card-img-top" alt="Oferta 2">
+                    <div class="card-body">
+                        <h5 class="card-title">S/3.00</h5>
+                        <p class="card-text">Descuento del 15%. ¡Solo por hoy!</p>
+                        <button class="btn btn-primary agregar" data-producto="Producto con Descuento 2" data-precio="3.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/pak vino.webp" class="card-img-top" alt="Oferta 3">
+                    <div class="card-body">
+                        <h5 class="card-title">S/30.00</h5>
+                        <p class="card-text">¡Compra ahora y ahorra un 25%!</p>
+                        <button class="btn btn-primary agregar" data-producto="Producto con Descuento 3" data-precio="30.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/oferta pilsen.....webp" class="card-img-top" alt="Oferta 4">
+                    <div class="card-body">
+                        <h5 class="card-title">S/20.00</h5>
+                        <p class="card-text">Hasta un 40% de descuento en este artículo. ¡No lo dejes pasar!</p>
+                        <button class="btn btn-primary agregar" data-producto="Producto con Descuento 4" data-precio="20.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/chetos oferta.webp" class="card-img-top" alt="Oferta 5">
+                    <div class="card-body">
+                        <h5 class="card-title">S/10.00</h5>
+                        <p class="card-text">Hasta un 10% de descuento en este artículo. ¡No lo dejes pasar!</p>
+                        <button class="btn btn-primary agregar" data-producto="Producto con Descuento 5" data-precio="10.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/queque.webp" class="card-img-top" alt="Oferta 6">
+                    <div class="card-body">
+                        <h5 class="card-title">S/10.00</h5>
+                        <p class="card-text">¡No lo dejes pasar! Aprovecha el descuento.</p>
+                        <button class="btn btn-primary agregar" data-producto="Producto con Descuento 6" data-precio="10.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/pack doritos.webp" class="card-img-top" alt="Oferta 7">
+                    <div class="card-body">
+                        <h5 class="card-title">S/3.00</h5>
+                        <p class="card-text">Hasta un 40% de descuento en este artículo. ¡No lo dejes pasar!</p>
+                        <button class="btn btn-primary agregar" data-producto="Producto con Descuento 7" data-precio="3.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/pack casino.webp" class="card-img-top" alt="Oferta 8">
+                    <div class="card-body">
+                        <h5 class="card-title">S/11.00</h5>
+                        <p class="card-text">Hasta un 30% de descuento en este artículo. ¡No lo dejes pasar!</p>
+                        <button class="btn btn-primary agregar" data-producto="Producto con Descuento 8" data-precio="11.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Tienda Virtual - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

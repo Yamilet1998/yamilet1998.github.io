@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Tienda Virtual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="bg-dark text-white py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">Tienda Virtual</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">Mi Carrito</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="metodos-de-pago.html">Métodos de Pago</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero de Productos -->
+    <section class="hero text-center py-5">
+        <h2>Explora Nuestros Productos</h2>
+        <p>Encuentra lo que necesitas en nuestra tienda online.</p>
+    </section>
+
+    <main class="container mt-5">
+        <h1 class="text-center">Productos Disponibles</h1>
+
+        <!-- Barra de búsqueda y filtros -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6 mb-2">
+                <input type="text" id="searchInput" class="form-control" placeholder="Buscar productos...">
+            </div>
+            <div class="col-md-3">
+                <select id="categoryFilter" class="form-select">
+                    <option value="all">Todas las Categorías</option>
+                    <option value="categoria1">Hogar</option>
+                    <option value="categoria2">Snacks</option>
+                    <option value="categoria3">Golosinas</option>
+                    <option value="categoria4">Postres</option>
+                    <option value="categoria5">Bebidas</option>
+                    <option value="categoria6">Bebidas alcoholicas</option>
+                    <option value="categoria7">Cigarros</option>
+
+                </select>
+            </div>
+        </div>
+
+        <!-- Productos en Grid (Filas y Columnas) -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="productGrid">
+            <!-- Producto 1 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/piqueo snax.jpg" class="" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Piqueo Snax</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Producto1" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/papita lays.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Papita Lays</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Producto2" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/doritos clasico.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Doritos Clásico</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Producto3" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/doritos dinamita.jpg" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Doritos Dinamita</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Doritos Dinamita" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/doritos queso fuego.jpg" class="card-img-top" alt="Producto 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Doritos Queso Fuego</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Doritos Queso Fuego" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/doritos flaming hot.jpg" class="card-img-top" alt="Producto 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Doritos Flaming Hot</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Doritos Flaming Hot" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/cheetos queso.jpg" class="card-img-top" alt="Producto 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Cheetos Queso</h5>
+                        <p class="card-text"> S/ 1.5 </p>
+                        <button class="btn btn-primary agregar" data-producto="Cheetos Queso" data-precio="1.5">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/chetos queso picante.jpg" class="card-img-top" alt="Producto 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Cheetos Queso Picante</h5>
+                        <p class="card-text"> S/ 1.5 </p>
+                        <button class="btn btn-primary agregar" data-producto="Cheetos Queso Picante" data-precio="1.5">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/inka chips bbq.jpg" class="card-img-top" alt="Producto 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Inka Chips BBQ</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Inka Chips BBQ" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/jalapeño nuevo.webp" class="card-img-top" alt="Producto 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Inka Chips Jalapeño</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Inka Chips Jalapeño" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        
+
+            <!-- Producto 11 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/inka chips nativas.jpg" class="card-img-top" alt="Producto 11">
+                    <div class="card-body">
+                        <h5 class="card-title">Inka Chips Nativas</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Inka Chips Nativas" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 12 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/inka chips queso y cebolla.jpg" class="card-img-top" alt="Producto 12">
+                    <div class="card-body">
+                        <h5 class="card-title">Inka Chips Queso y Cebolla</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Inka Chips Queso y Cebolla" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 13 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/inka chips sal de mar.jpg" class="card-img-top" alt="Producto 13">
+                    <div class="card-body">
+                        <h5 class="card-title">Inka Chips Sal de Mar</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Inka Chips Sal de Mar" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 14 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/inka chips bembos.webp"card-img-top" alt="Producto 14">
+                    <div class="card-body">
+                        <h5 class="card-title">Inka Chips Bembos</h5>
+                        <p class="card-text"> S/ 2.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Inka Chips Bembos" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 15 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/cuates.jpg" class="card-img-top" alt="Producto 15">
+                    <div class="card-body">
+                        <h5 class="card-title">Cuates Picante</h5>
+                        <p class="card-text"> S/ 1.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Cuates Picante" data-precio="1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 16 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/cuate tradicional.jpg" class="card-img-top" alt="Producto 16">
+                    <div class="card-body">
+                        <h5 class="card-title">Cuate Tradicional</h5>
+                        <p class="card-text"> S/ 1.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Cuate Tradicional" data-precio="1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 17 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/pringles crema y cebolla.jpg" class="card-img-top" alt="Producto 17">
+                    <div class="card-body">
+                        <h5 class="card-title">Pringles Crema y Cebolla</h5>
+                        <p class="card-text"> S/ 9.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Pringles Crema y Cebolla" data-precio="9.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 18 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/pringles original.jpg" class="card-img-top" alt="Producto 18">
+                    <div class="card-body">
+                        <h5 class="card-title">Pringles Original</h5>
+                        <p class="card-text"> S/ 9.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Pringles Original" data-precio="9.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 19 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/pringles queso.jpg" class="card-img-top" alt="Producto 19">
+                    <div class="card-body">
+                        <h5 class="card-title">Pringles Queso</h5>
+                        <p class="card-text"> S/ 9.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Pringles Queso" data-precio="9.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 20 -->
+            <div class="col product-item" data-category="categoria2">
+                <div class="card">
+                    <img src="imagenes/mini pringles original.jpg" class="card-img-top" alt="Producto 20">
+                    <div class="card-body">
+                        <h5 class="card-title">Mini Pringles Original</h5>
+                        <p class="card-text"> S/ 5.00 </p>
+                        <button class="btn btn-primary agregar" data-producto="Mini Pringles Original" data-precio="5.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 21 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu feroz.jpg" class="card-img-top" alt="Producto 21">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Feroz</h5>
+                        <p class="card-text">S/2.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Feroz" data-precio="S/2.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 22 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu aros.jpg" class="card-img-top" alt="Producto 22">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Aros</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Aros" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 23 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu casquitos.jpg" class="card-img-top" alt="Producto 23">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Casquitos</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Casquitos" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 24 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu dino.jpg" class="card-img-top" alt="Producto 24">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Dino</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Dino" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 25 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu fresitas.jpg" class="card-img-top" alt="Producto 25">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Fresitas</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Fresitas" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 26 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu gusanos dulces.jpg" class="card-img-top" alt="Producto 26">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Gusanos</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Gusanos" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 27 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu lenguas.jpg" class="card-img-top" alt="Producto 27">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Lenguas</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Lenguas" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 28 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu gusanos.jpg" class="card-img-top" alt="Producto 28">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Gusanos Ácidos</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Gusanos Ácidos" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 29 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu love.jpg" class="card-img-top" alt="Producto 29">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Love</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Love" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 30 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu monster.jpg" class="card-img-top" alt="Producto 30">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Monster</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Monster" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 31 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu oro.jpg" class="card-img-top" alt="Producto 31">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Oro</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Oro" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 32 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu sabores.jpg" class="card-img-top" alt="Producto 32">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Sabores</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Sabores" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 33 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trululu sandia.jpg" class="card-img-top" alt="Producto 33">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Sandía</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Sandía" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 34 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/gomita splash 1.jpg" class="card-img-top" alt="Producto 34">
+                    <div class="card-body">
+                        <h5 class="card-title">Trululu Splash</h5>
+                        <p class="card-text"> S/ 2.50 </p>
+                        <button class="btn btn-primary agregar" data-producto="Trululu Splash" data-precio=" S/ 2.50 ">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 35 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/hals rojo.webp" class="card-img-top" alt="Producto 35">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Halls rojo</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Halls rojo" data-precio="S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 36 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/halls azul.webp" class="card-img-top" alt="Producto 36">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Halls Mora Azul</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Halls Mora Azul" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 37 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/halss negro.webp" class="card-img-top" alt="Producto 37">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Halls Negro</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Halls Negro" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 38 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/halls fruit.webp" class="card-img-top" alt="Producto 38">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Halls Fruit</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Halls Fruit" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 39 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/mentita caramelo.jpg" class="card-img-top" alt="Producto 39">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Mentitas</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Mentitas" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 40 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/mentita masticable.jpg" class="card-img-top" alt="Producto 40">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Masticable Mentitas</h5>
+                        <p class="card-text"> S/0.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Masticable Mentitas" data-precio=" S/0.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 41 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/craamelo ti tac menta.webp" class="card-img-top" alt="Producto 41">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Tic Tac Menta</h5>
+                        <p class="card-text"> S/3.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Tic Tac Menta" data-precio=" S/3.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 42 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/caramelo tic tac naranja.webp" class="card-img-top" alt="Producto 42">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Tic Tac Naranja</h5>
+                        <p class="card-text"> S/3.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Tic Tac Naranja" data-precio=" S/3.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 43 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/triden menta.webp" class="card-img-top" alt="Producto 43">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Trident Menta Grande</h5>
+                        <p class="card-text"> S/4.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Trident Menta Grande" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 44 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/triden sandía.webp" class="card-img-top" alt="Producto 44">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Trident Sandía</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Trident Sandía" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 45 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trident fresa.webp" class="card-img-top" alt="Producto 45">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Trident Fresa</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Trident Fresa" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 46 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trident mora.webp" class="card-img-top" alt="Producto 46">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Trident Mora</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Trident Mora" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 47 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trident yerba.webp" class="card-img-top" alt="Producto 47">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Trident Yerba</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Trident Yerba" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 48 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/trident menta.webp" class="card-img-top" alt="Producto 48">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Trident Menta</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Trident Menta" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 49 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/boogie.webp" class="card-img-top" alt="Producto 49">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Bogie Sandía, Naranja o Fresa</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Bogie Sandía, Naranja o Fresa" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 50 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/Chicle aterralengua.webp" class="card-img-top" alt="Producto 50">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Ácido Aterralengua</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Ácido Aterralengua" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 51 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/chicle barbie.png" class="card-img-top" alt="Producto 51">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Barbie</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Barbie" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 52 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/chicle acido bola.webp" class="card-img-top" alt="Producto 52">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Super Ácido Surtdidos</h5>
+                        <p class="card-text"> S/0.30</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Super Ácido Surtdidos" data-precio=" S/0.30">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 53 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/revolcon 1.avif" class="card-img-top" alt="Producto 53">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Revolcón Surtidos</h5>
+                        <p class="card-text"> S/0.20</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Revolcón Surtidos" data-precio=" S/0.20">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 54 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/tumix 1.jpg" class="card-img-top" alt="Producto 54">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Tumix</h5>
+                        <p class="card-text"> S/0.10</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Tumix" data-precio=" S/0.10">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 55 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/kataboom 1.png" class="card-img-top" alt="Producto 55">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicle Kataboom Surtido</h5>
+                        <p class="card-text"> S/0.20</p>
+                        <button class="btn btn-primary agregar" data-producto="Chicle Kataboom Surtido" data-precio=" S/0.20">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 56 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/barrilete 1.webp" class="card-img-top" alt="Producto 56">
+                    <div class="card-body">
+                        <h5 class="card-title">Barrilete en Barra</h5>
+                        <p class="card-text"> S/0.30</p>
+                        <button class="btn btn-primary agregar" data-producto="Barrilete en Barra" data-precio=" S/0.30">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 57 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/fruna clasica 1.jpg" class="card-img-top" alt="Producto 57">
+                    <div class="card-body">
+                        <h5 class="card-title">Frunas Tradicionales</h5>
+                        <p class="card-text"> S/0.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Frunas Tradicionales" data-precio=" S/0.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 58 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/fruna blocks.jpg" class="card-img-top" alt="Producto 58">
+                    <div class="card-body">
+                        <h5 class="card-title">Fruna Blocks</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Fruna Blocks" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 59 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/full caramelo cherry.jpg" class="card-img-top" alt="Producto 59">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Full Cherry</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Full Cherry" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 60 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/full caramelo limon.jpg" class="card-img-top" alt="Producto 60">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Full Limón</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Full Limón" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 61 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/full caramelo mandarina.jpg" class="card-img-top" alt="Producto 61">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Full Mandarina</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Full Mandarina" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 62 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/full masticable limon.jpg" class="card-img-top" alt="Producto 62">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Masticable Full Limón</h5>
+                        <p class="card-text"> S/0.30</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Masticable Full Limón" data-precio=" S/0.30">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 63 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/chupete globo pop led.webp" class="card-img-top" alt="Producto 63">
+                    <div class="card-body">
+                        <h5 class="card-title">Chupete Globo Pop Led Surtido</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Chupete Globo Pop Led Surtido" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 64 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/GLOBO POP SURTIDOS.webp" class="card-img-top" alt="Producto 64">
+                    <div class="card-body">
+                        <h5 class="card-title">Chupetes Globo pop Surtido</h5>
+                        <p class="card-text"> S/0.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Chupetes Globo pop Surtido" data-precio=" S/0.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 65 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/que loco.jpg" class="card-img-top" alt="Producto 65">
+                    <div class="card-body">
+                        <h5 class="card-title">Chupetin ¡Qué Loco!</h5>
+                        <p class="card-text"> 1/0.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Chupetin ¡Qué Loco!" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 66 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/caramelo de limon.jpg" class="card-img-top" alt="Producto 66">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo de Limón</h5>
+                        <p class="card-text"> S/0.10</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo de Limón" data-precio=" S/0.10">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 67 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/caramelo ambro colas.jpg" class="card-img-top" alt="Producto 67">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo Ambro Colas</h5>
+                        <p class="card-text"> S/0.10</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo Ambro Colas" data-precio=" S/0.10">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 68 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/caramelo cafe.jpg" class="card-img-top" alt="Producto 68">
+                    <div class="card-body">
+                        <h5 class="card-title">Caramelo de Café</h5>
+                        <p class="card-text"> S/0.10</p>
+                        <button class="btn btn-primary agregar" data-producto="Caramelo de Café" data-precio=" S/0.10">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 69 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/cereal bar chocolate.jpg" class="card-img-top" alt="Producto 69">
+                    <div class="card-body">
+                        <h5 class="card-title">Cereal Bar de Chocolate</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Cereal Bar de Chocolate" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 70 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/cereal Bar miel.jpg" class="card-img-top" alt="Producto 70">
+                    <div class="card-body">
+                        <h5 class="card-title">Cereal Bar de Miel</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Cereal Bar de Miel" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 71 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/cereal bar original.jpg" class="card-img-top" alt="Producto 71">
+                    <div class="card-body">
+                        <h5 class="card-title">Cereal Bar Original</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Cereal Bar Original" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 72 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/chocman clasico.jpg" class="card-img-top" alt="Producto 72">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocman Clásico</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Chocman Clásico" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 73 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/chicman doble.jpg" class="card-img-top" alt="Producto 73">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocman Doble Manjar</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Chocman Doble Manjar" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 74 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/can cun bizcocho.jpg" class="card-img-top" alt="Producto 74">
+                    <div class="card-body">
+                        <h5 class="card-title">Bizcoho Can Cun</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Bizcoho Can Cun" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 75 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/gretel galleta.jpg" class="card-img-top" alt="Producto 75">
+                    <div class="card-body">
+                        <h5 class="card-title">Galleta Gretel de Manjar</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Galleta Gretel de Manjar" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 76 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/gretel chocolate.jpg" class="card-img-top" alt="Producto 76">
+                    <div class="card-body">
+                        <h5 class="card-title">Galleta Gretel de Chocolate</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Galleta Gretel de Chocolate" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 77 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/frac chocolate.jpg" class="card-img-top" alt="Producto 77">
+                    <div class="card-body">
+                        <h5 class="card-title">Galleta Frac de Chocolate</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Galleta Frac de Chocolate" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 78 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/frac clasica.jpg" class="card-img-top" alt="Producto 78">
+                    <div class="card-body">
+                        <h5 class="card-title">Galleta Frac Clásica</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Galleta Frac Clásica" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 79 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/frac menta.jpg" class="card-img-top" alt="Producto 79">
+                    <div class="card-body">
+                        <h5 class="card-title">Galleta Frac de Menta</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Galleta Frac de Menta" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 80 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/frac vainilla.jpg" class="card-img-top" alt="Producto 80">
+                    <div class="card-body">
+                        <h5 class="card-title">Galleta Frac de Vainilla</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Galleta Frac de Vainilla" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 81 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/donuts chocolate.jpg" class="card-img-top" alt="Producto 81">
+                    <div class="card-body">
+                        <h5 class="card-title">Galleta Donuts de Chocolate</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Galleta Donuts de Chocolate" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 82 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/donust crunch.jpg" class="card-img-top" alt="Producto 82">
+                    <div class="card-body">
+                        <h5 class="card-title">Galleta Donuts Crunch</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Galleta Donuts Crunch" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 83 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/caritas.jpg" class="card-img-top" alt="Producto 83">
+                    <div class="card-body">
+                        <h5 class="card-title">Galleta Caritas</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Galleta Caritas" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 84 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/obsesión.jpg" class="card-img-top" alt="Producto 84">
+                    <div class="card-body">
+                        <h5 class="card-title">Obsesión</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Obsesión" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 85 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/nik chocolate grande.jpg" class="card-img-top" alt="Producto 85">
+                    <div class="card-body">
+                        <h5 class="card-title">Wafer Nik Chocolate Grande</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Wafer Nik Chocolate Grande" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 86 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/nik fresa grande.jpg" class="card-img-top" alt="Producto 86">
+                    <div class="card-body">
+                        <h5 class="card-title">Wafer Nik Fresa Grande</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Wafer Nik Fresa Grande" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 87 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/nik vainilla grande.jpg" class="card-img-top" alt="Producto 87">
+                    <div class="card-body">
+                        <h5 class="card-title">Wafer Nik Vainilla Grande</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Wafer Nik Vainilla Grande" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 88 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/nic chocolate pequeño.jpg" class="card-img-top" alt="Producto 88">
+                    <div class="card-body">
+                        <h5 class="card-title">Wafer Nik Chocolate Pequeño</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Wafer Nik Chocolate Pequeño" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 89 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/nik fresa pequeño.jpg" class="card-img-top" alt="Producto 89">
+                    <div class="card-body">
+                        <h5 class="card-title">Wafer Nik Fresa Pequeño</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Wafer Nik Fresa Pequeño" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 90 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/Nik vainilla pequeño.jpg" class="card-img-top" alt="Producto 90">
+                    <div class="card-body">
+                        <h5 class="card-title">Wafer Nik Vainilla Pequeño</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Wafer Nik Vainilla Pequeño" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 91 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/vizzio almendras.jpg" class="card-img-top" alt="Producto 91">
+                    <div class="card-body">
+                        <h5 class="card-title">Wafer Nik Vainilla Pequeño</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Wafer Nik Vainilla Pequeño" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 92 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/mecano.jpg" class="card-img-top" alt="Producto 92">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Mecano</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Chocolate Mecano" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 93 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/cañonazo.jpg" class="card-img-top" alt="Producto 93">
+                    <div class="card-body">
+                        <h5 class="card-title">Cañonazo</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Cañonazo" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 94 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/golpe.webp" class="card-img-top" alt="Producto 94">
+                    <div class="card-body">
+                        <h5 class="card-title">Wafer Golpe</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Wafer Golpe" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 95 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/doña pepa.webp" class="card-img-top" alt="Producto 95">
+                    <div class="card-body">
+                        <h5 class="card-title">Doña Pepa</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Doña Pepa" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 96 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/sublime bitter.webp" class="card-img-top" alt="Producto 96">
+                    <div class="card-body">
+                        <h5 class="card-title">Subime Bitter</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Subime Bitter" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 97 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/Sublime blanco.webp" class="card-img-top" alt="Producto 97">
+                    <div class="card-body">
+                        <h5 class="card-title">Sublime Blanco</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Sublime Blanco" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 98 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/princesa.webp" class="card-img-top" alt="Producto 98">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Princesa</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Chocolate Princesa" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 99 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/hershey's.webp" class="card-img-top" alt="Producto 99">
+                    <div class="card-body">
+                        <h5 class="card-title">Hershey's Bitter</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Hershey's Bitter" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 100 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/hersheys blanco....webp" class="card-img-top" alt="Producto 100">
+                    <div class="card-body">
+                        <h5 class="card-title">Hershey's Blanco</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Hershey's Blanco" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 101 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/pelotitas...webp" class="card-img-top" alt="Producto 101">
+                    <div class="card-body">
+                        <h5 class="card-title">Pelotitas de Chocolate</h5>
+                        <p class="card-text"> S/0.10</p>
+                        <button class="btn btn-primary agregar" data-producto="Pelotitas de Chocolate" data-precio=" S/0.10">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 102 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/triangulo.webp" class="card-img-top" alt="Producto 102">
+                    <div class="card-body">
+                        <h5 class="card-title">Triangulo de Donofrio</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Triangulo de Donofrio" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 103 -->
+            <div class="col product-item" data-category="categoria3">
+                <div class="card">
+                    <img src="imagenes/multipack ultimo.webp" class="card-img-top" alt="Producto 103">
+                    <div class="card-body">
+                        <h5 class="card-title">Multipak: Triangulo, Sublime, Princesa</h5>
+                        <p class="card-text"> S/0.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Multipak: Triangulo, Sublime, Princesa" data-precio=" S/0.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 104 -->
+            <div class="col product-item" data-category="categoria1">
+                <div class="card">
+                    <img src="imagenes/taper termo.webp" class="card-img-top" alt="Producto 104">
+                    <div class="card-body">
+                        <h5 class="card-title">Taper Termo Niña</h5>
+                        <p class="card-text"> S/20.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Taper Termo Niña" data-precio=" S/20.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Producto 105 -->
+            <div class="col product-item" data-category="categoria1">
+                <div class="card">
+                    <img src="imagenes/taper termo niño.webp" class="card-img-top" alt="Producto 105">
+                    <div class="card-body">
+                        <h5 class="card-title">Taper Termo Niño</h5>
+                        <p class="card-text"> S/20.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Taper Termo Niño" data-precio=" S/20.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 106 -->
+            <div class="col product-item" data-category="categoria1">
+                <div class="card">
+                    <img src="imagenes/tomatodo 1.webp" class="card-img-top" alt="Producto 106">
+                    <div class="card-body">
+                        <h5 class="card-title">Tomatodo Espiral</h5>
+                        <p class="card-text"> S/10.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Tomatodo Espiral" data-precio=" S/10.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 107 -->
+            <div class="col product-item" data-category="categoria1">
+                <div class="card">
+                    <img src="imagenes/tomatodo navidad.webp" class="card-img-top" alt="Producto 107">
+                    <div class="card-body">
+                        <h5 class="card-title">Tomatodo Navidad</h5>
+                        <p class="card-text"> S/10.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Tomatodo Navidad" data-precio=" S/10.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 108 -->
+            <div class="col product-item" data-category="categoria5">
+                <div class="card">
+                    <img src="imagenes/pulp....webp" class="card-img-top" alt="Producto 108">
+                    <div class="card-body">
+                        <h5 class="card-title">Pulp</h5>
+                        <p class="card-text"> S/1.50</p>
+                        <button class="btn btn-primary agregar" data-producto="Pulp" data-precio=" S/1.50">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 109 -->
+            <div class="col product-item" data-category="categoria5">
+                <div class="card">
+                    <img src="imagenes/coca cola....webp" class="card-img-top" alt="Producto 109">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaseosa Coca cola 500ml</h5>
+                        <p class="card-text"> S/3.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Gaseosa Coca cola 500ml" data-precio=" S/3.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 110 -->
+            <div class="col product-item" data-category="categoria5">
+                <div class="card">
+                    <img src="imagenes/inka kola....webp" class="card-img-top" alt="Producto 110">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaseosa Inka kola 500ml</h5>
+                        <p class="card-text"> S/3.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Gaseosa Inka kola 500ml" data-precio=" S/3.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 111 -->
+            <div class="col product-item" data-category="categoria5">
+                <div class="card">
+                    <img src="imagenes/fanta....webp" class="card-img-top" alt="Producto 111">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaseosa Fanta 500ml</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Gaseosa Fanta 500ml" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 112 -->
+            <div class="col product-item" data-category="categoria5">
+                <div class="card">
+                    <img src="imagenes/pepsi....webp" class="card-img-top" alt="Producto 112">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaseosa Pepsi 500ml</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Gaseosa Pepsi 500ml" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 113 -->
+            <div class="col product-item" data-category="categoria5">
+                <div class="card">
+                    <img src="imagenes/guarana.webp" class="card-img-top" alt="Producto 113">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaseosa Guaraná 500ml</h5>
+                        <p class="card-text"> S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Gaseosa Guaraná 500ml" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 114 -->
+            <div class="col product-item" data-category="categoria5">
+                <div class="card">
+                    <img src="imagenes/oro.webp" class="card-img-top" alt="Producto 114">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaseosa Oro 500ml</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Gaseosa Oro 500ml" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 115 -->
+            <div class="col product-item" data-category="categoria5">
+                <div class="card">
+                    <img src="imagenes/big cola....webp" class="card-img-top" alt="Producto 115">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaseosa Big Cola 500ml</h5>
+                        <p class="card-text"> S/1.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Gaseosa Big Cola 500ml" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 116 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/four loko gold.webp" class="card-img-top" alt="Producto 116">
+                    <div class="card-body">
+                        <h5 class="card-title">Four Loko Gold</h5>
+                        <p class="card-text"> S/12.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Four Loko Gold" data-precio=" S/12.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 117 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/four loko maracuya.webp" class="card-img-top" alt="Producto 117">
+                    <div class="card-body">
+                        <h5 class="card-title">Four Loko Maracuyá</h5>
+                        <p class="card-text"> S/12.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Four Loko Maracuyá" data-precio=" S/12.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 118 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/four loko mora.webp" class="card-img-top" alt="Producto 118">
+                    <div class="card-body">
+                        <h5 class="card-title">Four Loko Mora</h5>
+                        <p class="card-text"> S/12.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Four Loko Mora" data-precio=" S/12.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 119 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/four loko ponche de frutas.webp" class="card-img-top" alt="Producto 119">
+                    <div class="card-body">
+                        <h5 class="card-title">Four Loko Ponche de Frutas</h5>
+                        <p class="card-text"> S/12.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Four Loko Ponche de Frutas" data-precio=" S/12.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 120 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/four loko sandia.webp" class="card-img-top" alt="Producto 120">
+                    <div class="card-body">
+                        <h5 class="card-title">Four Loko Sandía</h5>
+                        <p class="card-text"> S/12.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Four Loko Sandía" data-precio=" S/12.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 121 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/piscano de limon.webp" class="card-img-top" alt="Producto 121">
+                    <div class="card-body">
+                        <h5 class="card-title">Piscano de Limón</h5>
+                        <p class="card-text"> S/7.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Piscano de Limón" data-precio=" S/7.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 122 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/piscano frutos rojos.webp" class="card-img-top" alt="Producto 122">
+                    <div class="card-body">
+                        <h5 class="card-title">Piscano de Frutos Rojos</h5>
+                        <p class="card-text"> S/7.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Piscano de Frutos Rojos" data-precio=" S/7.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 123 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/piscano maracuya.webp" class="card-img-top" alt="Producto 123">
+                    <div class="card-body">
+                        <h5 class="card-title">Piscano de Mracuyá</h5>
+                        <p class="card-text"> S/7.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Piscano de Mracuyá" data-precio=" S/7.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 124 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/piscano naranja.webp" class="card-img-top" alt="Producto 124">
+                    <div class="card-body">
+                        <h5 class="card-title">Piscano de Naranja</h5>
+                        <p class="card-text"> S/7.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Piscano de Naranja" data-precio=" S/7.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 125 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/hit cuba libre.webp" class="card-img-top" alt="Producto 125">
+                    <div class="card-body">
+                        <h5 class="card-title">Hit Cuba Libre</h5>
+                        <p class="card-text"> S/7.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Hit Cuba Libre" data-precio=" S/7.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 126 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/hit mojito.webp" class="card-img-top" alt="Producto 126">
+                    <div class="card-body">
+                        <h5 class="card-title">Hit Cuba Mojito</h5>
+                        <p class="card-text"> S/7.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Hit Cuba Mojito" data-precio=" S/7.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 127 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/mikes fresa....webp" class="card-img-top" alt="Producto 127">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike's de Fresa</h5>
+                        <p class="card-text"> S/7.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Mike's de Fresa" data-precio=" S/7.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 128 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/mikes limon....webp" class="card-img-top" alt="Producto 128">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike's de Limón</h5>
+                        <p class="card-text"> S/7.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Mike's de Limón" data-precio=" S/7.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 129 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/mikes maracuya....webp" class="card-img-top" alt="Producto 129">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike's de Maracuyá</h5>
+                        <p class="card-text"> S/7.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Mike's de Maracuyá" data-precio=" S/7.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 130 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/vino blanco santiago q..jpg" class="card-img-top" alt="Producto 130">
+                    <div class="card-body">
+                        <h5 class="card-title">Vino Blanco Santiago Queirolo</h5>
+                        <p class="card-text"> S/20.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Vino Blanco Santiago Queirolo" data-precio=" S/20.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 131 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/vino santiago q. borgoña.jpg" class="card-img-top" alt="Producto 131">
+                    <div class="card-body">
+                        <h5 class="card-title">Vino Borgoña Santiago Queirolo</h5>
+                        <p class="card-text"> S/20.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Vino Borgoña Santiago Queirolo" data-precio=" S/20.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 132 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/vino santiago q. gran rosse.jpg" class="card-img-top" alt="Producto 132">
+                    <div class="card-body">
+                        <h5 class="card-title">Vino Gran Rosse Santiago Queirolo</h5>
+                        <p class="card-text"> S/20.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Vino Gran Rosse Santiago Queirolo" data-precio=" S/20.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Producto 133 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/Vino Blanco TABERNERO Gran Blanco Semi Seco.webp" class="card-img-top" alt="Producto 133">
+                    <div class="card-body">
+                        <h5 class="card-title">Vino Blanco Tabernero</h5>
+                        <p class="card-text"> S/20.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Vino Blanco Tabernero" data-precio=" S/20.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 134 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/Vino Rosé TABERNERO Gran Rosé Semi Seco.webp" class="card-img-top" alt="Producto 134">
+                    <div class="card-body">
+                        <h5 class="card-title">Vino Rose Tabernero</h5>
+                        <p class="card-text"> S/20.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Vino Rose Tabernero" data-precio=" S/20.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 135 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/Vino Tinto TABERNERO Borgoña.webp" class="card-img-top" alt="Producto 135">
+                    <div class="card-body">
+                        <h5 class="card-title">Vino Borgoña Tabernero</h5>
+                        <p class="card-text"> S/20.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Vino Borgoña Tabernero" data-precio=" S/20.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 136 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/corna six opack.webp" class="card-img-top" alt="Producto 136">
+                    <div class="card-body">
+                        <h5 class="card-title">Six Pack de Cerveza Corona</h5>
+                        <p class="card-text"> S/30.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Six Pack de Cerveza Corona" data-precio=" S/30.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 137 -->
+            <div class="col product-item" data-category="categoria6">
+                <div class="card">
+                    <img src="imagenes/pilsen ....webp" class="card-img-top" alt="Producto 137">
+                    <div class="card-body">
+                        <h5 class="card-title">Six Pack de Cerveza Pilsen</h5>
+                        <p class="card-text"> S/30.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Six Pack de Cerveza Pilsen" data-precio=" S/30.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 138 -->
+            <div class="col product-item" data-category="categoria4">
+                <div class="card">
+                    <img src="imagenes/chifon.jpg" class="card-img-top" alt="Producto 138">
+                    <div class="card-body">
+                        <h5 class="card-title">chifon de Naranja</h5>
+                        <p class="card-text"> S/2.00 x Porción</p>
+                        <button class="btn btn-primary agregar" data-producto="chifon de Naranja" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Producto 139 -->
+            <div class="col product-item" data-category="categoria4">
+                <div class="card">
+                    <img src="imagenes/pai de limon.webp" class="card-img-top" alt="Producto 139">
+                    <div class="card-body">
+                        <h5 class="card-title">Pai de Limón</h5>
+                        <p class="card-text"> S/2.00 x Porción</p>
+                        <button class="btn btn-primary agregar" data-producto="Pai de Limón" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 140 -->
+            <div class="col product-item" data-category="categoria4">
+                <div class="card">
+                    <img src="imagenes/pai de manzana.webp" class="card-img-top" alt="Producto 140">
+                    <div class="card-body">
+                        <h5 class="card-title">Pai de Manzana</h5>
+                        <p class="card-text"> S/2.00 x Porción</p>
+                        <button class="btn btn-primary agregar" data-producto="Pai de Manzana" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 141 -->
+            <div class="col product-item" data-category="categoria4">
+                <div class="card">
+                    <img src="imagenes/pai de maracuyá.webp" class="card-img-top" alt="Producto 141">
+                    <div class="card-body">
+                        <h5 class="card-title">Pai de Maracuyá</h5>
+                        <p class="card-text"> S/2.00 x Porción</p>
+                        <button class="btn btn-primary agregar" data-producto="Pai de Maracuyá" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 142 -->
+            <div class="col product-item" data-category="categoria4">
+                <div class="card">
+                    <img src="imagenes/YOGURT.jpg" class="card-img-top" alt="Producto 142">
+                    <div class="card-body">
+                        <h5 class="card-title">Yogurt Natural</h5>
+                        <p class="card-text"> S/2.00 x Vaso</p>
+                        <button class="btn btn-primary agregar" data-producto="Yogurt Natural" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 143 -->
+            <div class="col product-item" data-category="categoria4">
+                <div class="card">
+                    <img src="imagenes/helados saboratti.jpg" class="card-img-top" alt="Producto 143">
+                    <div class="card-body">
+                        <h5 class="card-title">Helados en Bolita Sabores</h5>
+                        <p class="card-text"> S/1.00 x Cono</p>
+                        <button class="btn btn-primary agregar" data-producto="Helados en Bolita Sabores" data-precio=" S/2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 144 -->
+            <div class="col product-item" data-category="categoria7">
+                <div class="card">
+                    <img src="imagenes/cigarro lucki mora.webp" class="card-img-top" alt="Producto 144">
+                    <div class="card-body">
+                        <h5 class="card-title">Cigarro Lucki de Mora</h5>
+                        <p class="card-text"> S/1.00 x Unidad</p>
+                        <button class="btn btn-primary agregar" data-producto="Cigarro Lucki de Mora" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 145 -->
+            <div class="col product-item" data-category="categoria7">
+                <div class="card">
+                    <img src="imagenes/cigarro lucki sandia.webp" class="card-img-top" alt="Producto 145">
+                    <div class="card-body">
+                        <h5 class="card-title">Cigarro Lucki de Sandía</h5>
+                        <p class="card-text"> S/1.00 x Unidad</p>
+                        <button class="btn btn-primary agregar" data-producto="Cigarro Lucki de Sandía" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 146 -->
+            <div class="col product-item" data-category="categoria7">
+                <div class="card">
+                    <img src="imagenes/Cigarro MARLBORO sandia.webp" class="card-img-top" alt="Producto 146">
+                    <div class="card-body">
+                        <h5 class="card-title">Cigarro Malboro Sandía</h5>
+                        <p class="card-text"> S/1.00 x Unidad</p>
+                        <button class="btn btn-primary agregar" data-producto="Cigarro Malboro Sandía" data-precio=" S/1.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+ 
+ 
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Tienda Virtual - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+ 
+</body>
+</html>

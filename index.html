@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Tienda Virtual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-dark text-white py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">Tienda Virtual</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">Mi Carrito</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="metodos-de-pago.html">Métodos de Pago</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero text-center text-white" style="background-image: url(imagenes/matizado-2.jpg); background-size: cover; padding: 100px 0;">
+        <h1>Bienvenido a mi Tienda Virtual</h1>
+        <h1>DON CONEJO</h1>
+        <p></p>
+
+        <p>Encuentra los mejores productos al mejor precio.</p>
+        <p></p>
+
+        <a href="productos.html" class="btn btn-primary btn-lg">Explora Nuestros Productos</a>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="container mt-5">
+        <h2 class="text-center mb-4">Productos Destacados</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <!-- Producto 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/pulp....webp" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Pack Pulp</h5>
+                        <p class="card-text"> S/6.90</p>
+                        <button class="btn btn-primary agregar" data-producto="Pack Pulp" data-precio="6.90">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/cigarro lucki sandia.webp" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Cigarro Lucki Sandía</h5>
+                        <p class="card-text">S/15.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Cigarro Lucki Sandía" data-precio="15.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/pack oferta corona.webp" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Six Pack Corona</h5>
+                        <p class="card-text">S/30.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Six Pack Corona" data-precio="30.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/PIQUEO OFERTA.webp" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Piqueo Snacks</h5>
+                        <p class="card-text">S/2.00</p>
+                        <button class="btn btn-primary agregar" data-producto="Piqueo Snacks" data-precio="2.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ofertas Especiales -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Ofertas Especiales</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- Oferta 1 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="imagenes/oferta pringles.jpg" class="card-img-top" alt="Oferta 1">
+                        <div class="card-body">
+                            <h5 class="card-title">2x1 en Pringles </h5>
+                            <p class="card-text">Aprovecha un descuento único en este producto.</p>
+                            <p class="card-text"> S/ 15.00 </p>
+                            <button class="btn btn-danger agregar" data-producto="Oferta Especial 1" data-precio="S/ 15.00">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oferta 2 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="imagenes/mikes oferta.jpeg" class="card-img-top" alt="Oferta 2">
+                        <div class="card-body">
+                            <h5 class="card-title"> Pack de Mikes Surtidas</h5>
+                            <p class="card-text">¡Solo por hoy! Obtén un descuento del 50%.</p>
+                            <p class="card-text">No Desaproveches Esta Gran Oportunidad</p>
+                            <p class="card-text"> S/ 16.90</p>
+
+                            <button class="btn btn-danger agregar" data-producto="Oferta Especial 2" data-precio=" S/ 16.90">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oferta 3 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="imagenes/pack cocacola oferta.webp" class="card-img-top" alt="Oferta 3">
+                        <div class="card-body">
+                            <h5 class="card-title"> Tus gaseosa Favoritas</h5>
+                            <p class="card-text">Compra ahora y ahorra más del 40%.</p>
+                            <p class="card-text">S/ 5.00</p>
+                            <button class="btn btn-danger agregar" data-producto="Oferta Especial 3" data-precio="S/ 16.90">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oferta 4 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="imagenes/oferta gomitas trululu.jpg" class="card-img-top" alt="Oferta 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Gomitas Trululu</h5>
+                            <p class="card-text">¡Lleva 3 y paga 2 en los sabores que más te agraden!</p>
+                            <p class="card-text"> S/ 5.00</p>
+                            <button class="btn btn-danger agregar" data-producto="Oferta Especial 4" data-precio="S/ 5.00">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Tienda Virtual - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* Establecer los colores */
+:root {
+    --color-primario: #28a745; /* Verde para botones */
+    --color-secundario: #007bff; /* Azul para encabezados */
+    --color-fondo: #f8f9fa; /* Fondo gris claro */
+    --color-texto: #343a40; /* Texto principal */
+    --color-texto-secundario: #6c757d; /* Texto secundario */
+    --color-boton-hover: #218838; /* Verde más oscuro para hover */
+}
+
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-secundario);
+}
+
+h5, .card-title {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-texto);
+}
+
+/* Botones */
+button {
+    font-size: 1rem;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Fondo y márgenes */
+main {
+    margin: 30px 0;
+}
+
+/* Barra de búsqueda y filtros */
+#searchInput, #categoryFilter {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Margen superior para separar la barra de búsqueda del grid de productos */
+.row.mb-4 {
+    margin-top: 20px;
+}
+
+/* Carrusel y Sección Destacada */
+.hero {
+    background-image: url('https://via.placeholder.com/1500x500'); /* Imagen de fondo para la sección hero */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Sección de Ofertas */
+.ofertas-destacadas {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie de página */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para productos y ofertas en filas y columnas */
+.ofertas-destacadas, .productos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Zoom suave */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    /* En pantallas pequeñas, los productos ocupan el 100% del ancho disponible */
+    .ofertas-destacadas, .productos-container {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+}
